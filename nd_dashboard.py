@@ -110,14 +110,6 @@ if uploaded_file is not None:
             st.warning(f"กรุณาตรวจสอบว่าชื่อ Header ในไฟล์ Excel ตรงกับที่กำหนดในโค้ด (เช่น '{COL_ORDER_TYPE}', '{COL_STATUS}' ฯลฯ)")
             st.stop()
 
-
-        # --- 2. ส่วนหัวของ Dashboard ---
-        header_cols = st.columns([3, 1])
-        with header_cols[0]:
-            st.title("🚚 ND Monitoring Dashboard")
-        #with header_cols[1]:เผื่อเพิ่ม Column
-
-
         # --- 3. เตรียมข้อมูล และ คำนวณ KPIs ---
         df_filtered = df[df[COL_ORDER_TYPE] != 'Cancelled'].copy()
 
@@ -326,3 +318,4 @@ if uploaded_file is not None:
 else:
 
     st.info("👋 กรุณาอัปโหลดไฟล์ 'ND update' ของคุณที่ Sidebar ด้านซ้ายเพื่อเริ่มต้นใช้งาน")
+
