@@ -173,7 +173,7 @@ if uploaded_file is not None:
                 hole=0.4,
                 marker=dict(colors=colors), # Manually setting the colors
                 textinfo='percent',
-                textposition='inside'
+                textposition='inside',
                 insidetextorientation='horizontal',
                 textfont=dict(size=40),
             )])
@@ -320,5 +320,6 @@ if uploaded_file is not None:
 else:
 
     st.info("👋 กรุณาอัปโหลดไฟล์ 'ND update' ของคุณที่ Sidebar ด้านซ้ายเพื่อเริ่มต้นใช้งาน")
+
 
 
